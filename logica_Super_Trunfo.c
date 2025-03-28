@@ -9,6 +9,9 @@ int main(){
     float area1, area2;
     float PIB1, PIB2;
     int pontosturistico1, pontosturistico2;
+    float densidadepopulacional1, densidadepopulacional2;
+    float PIBpercapita1, PIBpercapita2;
+    float SuperPoder1, SuperPoder2;
 
     //Dados da primeira carta
 
@@ -26,6 +29,12 @@ int main(){
     scanf("%f", &PIB1);
     printf("Pontos Turisticos 1: \n");
     scanf("%d", &pontosturistico1);
+
+    //Cáculos da DensidadePopulacional, PIBpercapita, SuperPoder.
+    
+    densidadepopulacional1 = populacao1 / area1;
+    PIBpercapita1 = PIB1 / populacao1; 
+    SuperPoder1 = populacao1 + area1 + PIB1 + pontosturistico1 + PIBpercapita1 + densidadepopulacional1;
 
 
 
