@@ -85,7 +85,7 @@ int main(){
     printf("Super Poder: %f\n", SuperPoder2);
 
     //Comparações das cartas.
-    printf("\nComparacoes das Cartas:\n");
+    printf("\nComparações das Cartas:\n");
 
     if (populacao1 > populacao2) {
         printf("Cidade 1 tem o maior População.\n");
