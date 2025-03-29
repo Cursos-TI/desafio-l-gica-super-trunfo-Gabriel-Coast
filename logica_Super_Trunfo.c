@@ -13,10 +13,10 @@ int main(){
     float PIBpercapita1, PIBpercapita2;
     float SuperPoder1, SuperPoder2;
 
-    //Dados da primeira carta
+    //Dados da primeira carta.
 
     printf("Estado 1: \n");
-    scanf("%s", &estado1);
+    scanf("%9s", &estado1);
     printf("Código 1: \n");
     scanf("%s", &codigo1);
     printf("Cidade 1: \n");
@@ -30,12 +30,33 @@ int main(){
     printf("Pontos Turisticos 1: \n");
     scanf("%d", &pontosturistico1);
 
-    //Cáculos da DensidadePopulacional, PIBpercapita, SuperPoder.
-    
+    //Cáculos da DensidadePopulacional 1, PIBpercapita 1, SuperPoder 1.
+
     densidadepopulacional1 = populacao1 / area1;
     PIBpercapita1 = PIB1 / populacao1; 
     SuperPoder1 = populacao1 + area1 + PIB1 + pontosturistico1 + PIBpercapita1 + densidadepopulacional1;
 
+    //Dados da segunda carta.
+    
+    printf("Estado 2:\n");
+    scanf("%9s", &estado2);
+    printf("Código 2:\n");
+    scanf("%s", &codigo2);
+    printf("Cidade 2:\n");
+    scanf("%s", &cidade2);
+    printf("População 2:\n");
+    scanf("%d", %populacao2);
+    printf("Área 2:\n");
+    scanf("%f", &area2);
+    printf("PIB 2:\n");
+    scanf("%f", &PIB2);
+    printf("Pontos Turisticos 2:\n");
+    scanf("%d", &pontosturistico2);
 
+    //Calculando a DensidadePopulacional 2, PIBpercapita 2, SuperPoder 2.
+
+    densidadepopulacional2 = populacao2 / area2;
+    PIBpercapita2 = PIB2 / populacao2;
+    SuperPoder2 = populacao2 + area2 + PIB2 + pontosturistico2 + PIBpercapita2 + densidadepopulacional2;
 
 }
