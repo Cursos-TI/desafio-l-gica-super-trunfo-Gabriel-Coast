@@ -84,4 +84,43 @@ int main(){
     printf("PIB per capita: %.2f reais\n", PIBpercapita2);
     printf("Super Poder: %f", SuperPoder2);
 
+    //Comparações das cartas.
+    if (populacao1 > populacao2) {
+        printf("Cidade 1 tem o maior População.\n");
+    } else{
+        printf("Cidade 2 tem o maior População.\n");
+    }
+    if (area1 > area2) {
+        printf("Cidade 1 tem a maior Área.\n");
+    } else{
+        printf("Cidade 2 tem a maior Área.\n");
+    }
+    if (PIB1 > PIB2) {
+        printf("Cidade 1 tem o maior PIB.\n");
+    } else{
+        printf("Cidade 2 tem o maior PIB.\n");
+    }
+    if (pontosturistico1 > pontosturistico2) {
+        printf("Cidade 1 tem os maior Pontos Turisticos.\n");
+    } else{
+        printf("Cidade 2 tem os maior Pontos Turisticos.\n");
+    }
+    if (densidadepopulacional1 > densidadepopulacional2) {
+        printf("Cidade 1 tem a maior Densidade Populacional.\n");
+    } else{
+        printf("Cidade 2 tem a maior Densidade Populacional.\n");
+    }
+    if (PIBpercapita1 > PIBpercapita2) {
+        printf("Cidade 1 tem o maior PIB per capita.\n");
+    } else{
+        printf("Cidade 2 tem o maior PIB per capita.\n");
+    }
+    if (SuperPoder1 > SuperPoder2) {
+        printf("Cidade 1 tem o maior Super Poder.\n");
+    } else{
+        printf("Cidade 2 tem o maior Super Poder.\n");
+    }
+    
+
+
 }
