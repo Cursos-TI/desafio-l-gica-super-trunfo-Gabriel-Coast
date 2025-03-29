@@ -59,4 +59,29 @@ int main(){
     PIBpercapita2 = PIB2 / populacao2;
     SuperPoder2 = populacao2 + area2 + PIB2 + pontosturistico2 + PIBpercapita2 + densidadepopulacional2;
 
+    //Dados coletados
+    printf("\nCarta 1:\n");
+    printf("Estado: %s\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Cidade: %s\n", cidade1);
+    printf("População: %d habitantes\n", populacao1);
+    printf("Área %.2f km²\n", area1);
+    printf("PIB: %.2f bilhões de reais\n", PIB1);
+    printf("Pontos Turisticos: %d\n", pontosturistico1);
+    printf("Densidade Populacional: %.2f hab/km²\n",densidadepopulacional1);
+    printf("PIB per capita: %.2f\n reais", PIBpercapita1);
+    printf("Super Poder: %f\n ", SuperPoder1);
+
+    printf("\nCarta 2:\n");
+    printf("Estado: %s\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Cidade: %s\n", cidade2);
+    printf("População: %d habitantes\n", populacao2);
+    printf("Área: %.2f km²\n", area2);
+    printf("PIB: %.2f bilhões de reais\n", PIB2);
+    printf("Pontos Turisticos: %d\n", pontosturistico2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
+    printf("PIB per capita: %.2f reais\n", PIBpercapita2);
+    printf("Super Poder: %f", SuperPoder2);
+
 }
