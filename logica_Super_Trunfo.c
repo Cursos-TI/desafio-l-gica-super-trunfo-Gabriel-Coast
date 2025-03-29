@@ -82,9 +82,11 @@ int main(){
     printf("Pontos Turisticos: %d\n", pontosturistico2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadepopulacional2);
     printf("PIB per capita: %.2f reais\n", PIBpercapita2);
-    printf("Super Poder: %f", SuperPoder2);
+    printf("Super Poder: %f\n", SuperPoder2);
 
     //Comparações das cartas.
+    printf("\nComparacoes das Cartas:\n");
+
     if (populacao1 > populacao2) {
         printf("Cidade 1 tem o maior População.\n");
     } else{
