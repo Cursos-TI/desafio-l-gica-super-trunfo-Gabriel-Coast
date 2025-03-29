@@ -45,7 +45,7 @@ int main(){
     printf("Cidade 2:\n");
     scanf("%s", &cidade2);
     printf("População 2:\n");
-    scanf("%d", %populacao2);
+    scanf("%d", &populacao2);
     printf("Área 2:\n");
     scanf("%f", &area2);
     printf("PIB 2:\n");
