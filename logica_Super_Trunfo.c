@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+
+
 int main(){
     
     char estado1[10], estado2[10];
@@ -16,13 +18,14 @@ int main(){
     float SuperPoder1, SuperPoder2;
 
     //Dados da primeira carta.
+    
     printf("\n*** Cadrastando a Primeira Carta ***\n");
     printf("Estado 1: \n");
-    scanf("%10s", &estado1);
+    scanf("%10s", estado1);
     printf("Código 1: \n");
     scanf("%5s", &codigo1);
     printf("Cidade 1: \n");
-    scanf("%s", &cidade1);
+    scanf("%s", cidade1);
     printf("População 1: \n");
     scanf("%d", &populacao1);
     printf("Área 1: \n");
@@ -31,7 +34,8 @@ int main(){
     scanf("%f", &PIB1);
     printf("Pontos Turisticos 1: \n");
     scanf("%d", &pontosturistico1);
-
+    
+    
     //Cáculos da DensidadePopulacional 1, PIBpercapita 1, SuperPoder 1.
 
     densidadepopulacional1 = populacao1 / area1;
@@ -39,13 +43,13 @@ int main(){
     SuperPoder1 = populacao1 + area1 + PIB1 + pontosturistico1 + PIBpercapita1 + densidadepopulacional1;
 
     //Dados da segunda carta.
-    printf("\n*** Cadrastando a Segunda Carta ***\n");
+    printf("\n*** Cadastrando a Segunda Carta ***\n");
     printf("Estado 2:\n");
-    scanf("%10s", &estado2);
+    scanf("%10s", estado2);
     printf("Código 2:\n");
     scanf("%s", &codigo2);
     printf("Cidade 2:\n");
-    scanf("%s", &cidade2);
+    scanf("%s", cidade2);
     printf("População 2:\n");
     scanf("%d", &populacao2);
     printf("Área 2:\n");
@@ -98,9 +102,9 @@ int main(){
     {
     case 1:
     if (populacao1 > populacao2) {
-        printf("Cidade 1 tem a maior População.\n");
+        printf("Cidade 1 tem a maior População.\n", cidade1);
     } else if(populacao1 < populacao2){
-        printf("Cidade 2 tem a maior População.\n");
+        printf("Cidade 2 tem a maior População.\n", cidade2);
     } else{
         printf("### Houve um empate! ###\n");}
     
@@ -108,9 +112,9 @@ int main(){
     
     case 2:
     if (area1 > area2) {
-        printf("Cidade 1 tem a maior Área.\n");
+        printf("Cidade 1 tem a maior Área.\n", cidade1);
     } else if(area1 < area2){
-        printf("Cidade 2 tem a maior Área.\n");
+        printf("Cidade 2 tem a maior Área.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -119,9 +123,9 @@ int main(){
 
     case 3:
     if (PIB1 > PIB2) {
-        printf("Cidade 1 tem o maior PIB.\n");
+        printf("Cidade 1 tem o maior PIB.\n", cidade1);
     } else if(PIB1 < PIB2){
-        printf("Cidade 2 tem o maior PIB.\n");
+        printf("Cidade 2 tem o maior PIB.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -130,9 +134,9 @@ int main(){
 
     case 4:
     if (pontosturistico1 > pontosturistico2) {
-        printf("Cidade 1 tem os maior Pontos Turisticos.\n");
+        printf("Cidade 1 tem mais Pontos Turisticos.\n", cidade1);
     } else if(pontosturistico1 < pontosturistico2){
-        printf("Cidade 2 tem os maior Pontos Turisticos.\n");
+        printf("Cidade 2 tem mais Pontos Turisticos.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -141,9 +145,9 @@ int main(){
 
     case 5:
     if (densidadepopulacional1 > densidadepopulacional2) {
-        printf("Cidade 1 tem a maior Densidade Populacional.\n");
+        printf("Cidade 1 tem a maior Densidade Populacional.\n", cidade1);
     } else if(densidadepopulacional1 < densidadepopulacional2){
-        printf("Cidade 2 tem a maior Densidade Populacional.\n");
+        printf("Cidade 2 tem a maior Densidade Populacional.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -152,9 +156,9 @@ int main(){
         
     case 6:
     if (PIBpercapita1 > PIBpercapita2) {
-        printf("Cidade 1 tem o maior PIB per capita.\n");
+        printf("Cidade 1 tem o maior PIB per capita.\n", cidade1);
     } else if(PIBpercapita1 < PIBpercapita2){
-        printf("Cidade 2 tem o maior PIB per capita.\n");
+        printf("Cidade 2 tem o maior PIB per capita.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -163,9 +167,9 @@ int main(){
         
     case 7:
     if (SuperPoder1 > SuperPoder2) {
-        printf("Cidade 1 tem o maior Super Poder.\n");
+        printf("Cidade 1 tem o maior Super Poder.\n", cidade1);
     } else if(SuperPoder1 < SuperPoder2){
-        printf("Cidade 2 tem o maior Super Poder.\n");
+        printf("Cidade 2 tem o maior Super Poder.\n", cidade2);
     }else{
         printf("### Houve um empate! ###\n");
     }
@@ -173,6 +177,7 @@ int main(){
         break;
 
     default:
+    printf("Opção invalida!\n");
     }
 
 return 0;
