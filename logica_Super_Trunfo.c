@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main(){
     
@@ -14,7 +16,7 @@ int main(){
     float SuperPoder1, SuperPoder2;
 
     //Dados da primeira carta.
-
+    printf("\n*** Cadrastando a Primeira Carta ***\n");
     printf("Estado 1: \n");
     scanf("%10s", &estado1);
     printf("Código 1: \n");
@@ -37,9 +39,9 @@ int main(){
     SuperPoder1 = populacao1 + area1 + PIB1 + pontosturistico1 + PIBpercapita1 + densidadepopulacional1;
 
     //Dados da segunda carta.
-    
+    printf("\n*** Cadrastando a Segunda Carta ***\n");
     printf("Estado 2:\n");
-    scanf("%9s", &estado2);
+    scanf("%10s", &estado2);
     printf("Código 2:\n");
     scanf("%s", &codigo2);
     printf("Cidade 2:\n");
@@ -86,74 +88,93 @@ int main(){
 
     //Comparações das cartas.
     printf("\nComparações das Cartas:\n");
+    int opcao;
+    printf("\n--- Menu de Comparação ---\n");
+    printf("1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB per Capita\n7. Super Poder\n");
+    printf("Escolha o atributo para comparação: ");
+    scanf("%d", &opcao);
 
+    switch (opcao)
+    {
+    case 1:
     if (populacao1 > populacao2) {
         printf("Cidade 1 tem a maior População.\n");
     } else if(populacao1 < populacao2){
         printf("Cidade 2 tem a maior População.\n");
     } else{
-        printf("Houve um empate!\n");
-    }
-
-
+        printf("### Houve um empate! ###\n");}
+    
+        break;
+    
+    case 2:
     if (area1 > area2) {
         printf("Cidade 1 tem a maior Área.\n");
     } else if(area1 < area2){
         printf("Cidade 2 tem a maior Área.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
 
+        break;
 
-
+    case 3:
     if (PIB1 > PIB2) {
         printf("Cidade 1 tem o maior PIB.\n");
     } else if(PIB1 < PIB2){
         printf("Cidade 2 tem o maior PIB.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
 
+        break;
 
-
+    case 4:
     if (pontosturistico1 > pontosturistico2) {
         printf("Cidade 1 tem os maior Pontos Turisticos.\n");
     } else if(pontosturistico1 < pontosturistico2){
         printf("Cidade 2 tem os maior Pontos Turisticos.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
 
+        break;
 
-
+    case 5:
     if (densidadepopulacional1 > densidadepopulacional2) {
         printf("Cidade 1 tem a maior Densidade Populacional.\n");
     } else if(densidadepopulacional1 < densidadepopulacional2){
         printf("Cidade 2 tem a maior Densidade Populacional.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
 
-
-
+        break;
+        
+    case 6:
     if (PIBpercapita1 > PIBpercapita2) {
         printf("Cidade 1 tem o maior PIB per capita.\n");
     } else if(PIBpercapita1 < PIBpercapita2){
         printf("Cidade 2 tem o maior PIB per capita.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
 
-
-
+        break;
+        
+    case 7:
     if (SuperPoder1 > SuperPoder2) {
         printf("Cidade 1 tem o maior Super Poder.\n");
     } else if(SuperPoder1 < SuperPoder2){
         printf("Cidade 2 tem o maior Super Poder.\n");
     }else{
-        printf("Houve um empate!\n");
+        printf("### Houve um empate! ###\n");
     }
     
+        break;
 
+    default:
+    }
+
+return 0;
 
 }
