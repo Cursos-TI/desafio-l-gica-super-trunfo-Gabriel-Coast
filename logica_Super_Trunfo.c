@@ -91,12 +91,6 @@ int main(){
     printf("Super Poder: %.2f\n", SuperPoder2);
 
     //Comparações das cartas.
-    printf("\nComparações das Cartas:\n");
-    int opcao;
-    printf("\n--- Menu de Comparação ---\n");
-    printf("1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB per Capita\n7. Super Poder\n");
-    printf("Escolha o atributo para comparação: ");
-    scanf("%d", &opcao);
 
     int atributo1, atributo2;
     float valor1_attr1, valor2_attr1;
@@ -148,7 +142,8 @@ int main(){
         printf("--- Empate! ---\n");
     }
 
-
+    int opcao;
+    
     switch (opcao)
     {
     case 1:
