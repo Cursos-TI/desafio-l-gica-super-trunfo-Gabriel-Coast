@@ -98,6 +98,57 @@ int main(){
     printf("Escolha o atributo para comparação: ");
     scanf("%d", &opcao);
 
+    int atributo1, atributo2;
+    float valor1_attr1, valor2_attr1;
+    float valor1_attr2, valor2_attr2;
+    float soma1, soma2;
+
+    printf("\n--- Menu de Atributos ---\n");
+    printf("1. População\n2. Área\n3. PIB\n4. Pontos turísticos\n5. Densidade populacional\n6. PIB per capita\n");
+
+    do {
+        printf("Escolha o PRIMEIRO atributo (1 a 6): ");
+        scanf("%d", &atributo1);
+    } while (atributo1 < 1 || atributo1 > 6);
+
+    do {
+        printf("Escolha o SEGUNDO atributo (diferente do primeiro): ");
+        scanf("%d", &atributo2);
+    } while (atributo2 < 1 || atributo2 > 6 || atributo2 == atributo1);
+
+    // Função simples: pegar valor com base no atributo
+    #define GET_VAL(carta, attr) ( \
+        attr == 1 ? (float)populacao##carta : \
+        attr == 2 ? area##carta : \
+        attr == 3 ? PIB##carta : \
+        attr == 4 ? (float)pontosturistico##carta : \
+        attr == 5 ? densidadepopulacional##carta : \
+                   PIBpercapita##carta )
+
+    valor1_attr1 = GET_VAL(1, atributo1);
+    valor2_attr1 = GET_VAL(2, atributo1);
+    valor1_attr2 = GET_VAL(1, atributo2);
+    valor2_attr2 = GET_VAL(2, atributo2);
+
+    soma1 = valor1_attr1 + valor1_attr2;
+    soma2 = valor2_attr1 + valor2_attr2;
+
+    printf("\n--- Resultado da Comparação ---\n");
+    printf("Atributo %d: %.2f (Cidade 1) vs %.2f (Cidade 2)\n", atributo1, valor1_attr1, valor2_attr1);
+    printf("Atributo %d: %.2f (Cidade 1) vs %.2f (Cidade 2)\n", atributo2, valor1_attr2, valor2_attr2);
+    printf("Soma dos atributos:\n");
+    printf("%s: %.2f\n", cidade1, soma1);
+    printf("%s: %.2f\n", cidade2, soma2);
+
+    if (soma1 > soma2) {
+        printf("--- %s venceu! ---\n", cidade1);
+    } else if (soma2 > soma1) {
+        printf("--- %s venceu! ---\n", cidade2);
+    } else {
+        printf("--- Empate! ---\n");
+    }
+
+
     switch (opcao)
     {
     case 1:
@@ -165,16 +216,6 @@ int main(){
 
         break;
         
-    case 7:
-    if (SuperPoder1 > SuperPoder2) {
-        printf("%s tem o maior Super Poder.\n", cidade1);
-    } else if(SuperPoder1 < SuperPoder2){
-        printf("%s tem o maior Super Poder.\n", cidade2);
-    }else{
-        printf("### Houve um empate! ###\n");
-    }
-    
-        break;
 
     default:
     printf("Opção invalida!\n");
